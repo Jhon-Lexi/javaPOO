@@ -1,3 +1,4 @@
+package Models;
 /*
  Declarar una clase llamada Circunferencia que tenga como atributo privado el radio de
 tipo real. A continuación, se deben crear los siguientes métodos:
@@ -8,16 +9,19 @@ objeto.
 d) Método area(): para calcular el área de la circunferencia (Area = π ∗ radio2).
 e) Método perimetro(): para calcular el perímetro (Perimetro = 2 ∗ π ∗ radio).
  */
+public class Circunferencia {
+    private double radio;
 
-import Models.Circunferencia;
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        double radio;
-        System.out.println("Proporciona la circunferencia del objeto");
-        Circunferencia crear=new Circunferencia();
-        radio=crea.Circunferencia();
-        
-
+    Circunferencia(double radio){
+        this.radio =radio;
+    
     }
+
+    public  double getRadio(){
+        return radio;
+    }
+    public void setRadio(double radio){
+        this.radio=radio;
+    }
+
 }
