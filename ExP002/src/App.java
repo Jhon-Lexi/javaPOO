@@ -7,8 +7,15 @@ que existe entre los dos puntos que existen en la clase Puntos. Para conocer com
 calcular la distancia entre dos puntos consulte el siguiente link:
 http://www.matematicatuya.com/GRAFICAecuaciones/S1a.html
  */
+
+import Models.*;
+import Service.*;
+
 public class App {
     public static void main(String[] args) {
-       
+
+        PuntoService ft = new PuntoService();
+        ft.Menu();
+
     }
 }
