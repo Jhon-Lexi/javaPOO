@@ -45,12 +45,14 @@ public class Libro {
     public Libro(String Autor, String titulo, int pag, int isbn) {
 
         System.out.println("Metodo Constructor Con Parametros ");
-        // System.out.println("Nombre del autor: " + autor);
-        // System.out.println("Nombre del libro" + titulo);
-        // System.out.println("Numero de Paginas" + pag);
-        // System.out.println("ISBN 556434345" + isbn);
+      
     }
-
+    
+    @Override
+    public String toString() {
+       
+        return "Libro ===>  "+titulo+", Autor="+autor+", Paginas="+pag+", ISBN="+isbn;
+    }
 
 
    
