@@ -21,8 +21,45 @@ de no existir solución, se mostrará un mensaje.
 Nota: Formula ecuación 2o grado: (-b±√((b^2)-(4*a*c)))/(2*a) Solo varia el signo
 delante de -b
  */
+import java.util.Scanner;
+import Models.*;
+import Service.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        int x;
+        Scanner leer= new Scanner(System.in);
+        do {
+            System.out.println("LA CHICHARRONERA");
+            System.out.println("OPRIME ALGUNOS DE LOS NUMEROS SUGERIDOS PARA INTERACTUAR");
+            System.out.println("1 iNCIA EL PROGRAMA");
+            System.out.println("2 CIERRA EL PROGRAMA");
+            x=leer.nextInt();
+            switch (x) {
+                case 1:
+                     //Se crea un objeto de Raices con el nombre menu y se cinstruye.
+        RaicesService menu= new RaicesService();
+        //Sa asigna un objeto del tipo raices que va almacenar un objeto retornado de crearEcuacion.
+        Raices operacion= menu.crearEcuacion();
+        System.out.println(operacion);
+        double lip=  menu.getDiscriminante(operacion);
+       System.out.println(lip);
+    
+    //    menu.tieneRaices(operacion);
+    //    menu.obtenerRaiz(operacion);
+        menu.calcular(operacion);
+                    break;
+            
+                default:
+                if (x==2) {
+                    System.out.println("Adios");
+                }else{
+                    System.out.println("Esta opcion no esta en el menu");
+
+                }
+                    break;
+            }
+        } while (x!=2);
+       
+
     }
 }
