@@ -12,9 +12,13 @@ e) Método perimetro(): para calcular el perímetro (Perimetro = 2 ∗ π ∗ ra
 public class Circunferencia {
     private double radio;
 
-    Circunferencia(double radio){
-        this.radio =radio;
+    public Circunferencia(double radio){
+        
     
+    }
+
+    public Circunferencia(){
+        
     }
 
     public  double getRadio(){
@@ -24,4 +28,10 @@ public class Circunferencia {
         this.radio=radio;
     }
 
+    
+    @Override
+    public String toString() {
+        
+        return "el valor del radio es :"+radio;
+    }
 }
