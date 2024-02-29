@@ -25,13 +25,21 @@ public class Circunferencia {
         return radio;
     }
     public void setRadio(double radio){
-        this.radio=radio;
+        if (radio>0) {
+            
+            this.radio=radio;
+        }
+        System.out.println("Nose acepta numeros negativos");
     }
 
     
     @Override
     public String toString() {
+        if (radio>0) {
+            
+            return "el valor del radio es :"+radio;
+        }
+            return "no tiene solucion";
         
-        return "el valor del radio es :"+radio;
     }
 }

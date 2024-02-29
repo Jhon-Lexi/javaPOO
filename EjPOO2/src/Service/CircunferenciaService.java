@@ -27,15 +27,22 @@ public class CircunferenciaService {
         
             
             area=(Math.PI*(are.getRadio()* are.getRadio()));
-           System.out.println("Su Area es: "+area);
+            if (are.getRadio()>0) {
+                
+                System.out.println("Su Area es: "+area);
+            }
         
             
         }
             
         
-    }
+    
     public void perimetro(Circunferencia per){
-        double perimetro=(2*Math.PI*per.getRadio());
-        System.out.println("Su Perimetro es: "+perimetro);
+        
+        if (per.getRadio()>0) {
+            double perimetro=(2*Math.PI*per.getRadio());
+            System.out.println("Su Perimetro es: "+perimetro);
+            
+        }
     }
 }
