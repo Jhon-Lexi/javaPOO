@@ -48,6 +48,7 @@ public class App {
                   lee.perímetro(dato,dato);
                   
                   lee.superficie(dato, dato);
+                  lee.trazar(dato, dato);
                 }
               } else {
                 System.out.println("Solo se aceptan numeros positivos");
