@@ -44,7 +44,7 @@ public class Mes {
         Scanner leerDato = new Scanner(System.in);
         Mes secreto= new Mes();
         System.out.println("ingresa el el nombre del mes en minusculas");
-        secreto.setMes(leerDato.next());
+        secreto.setMes(leerDato.nextLine());
         // dato=leerDato.nextLine();
         secreto.comparar(secreto);
         // System.out.println(dato);
