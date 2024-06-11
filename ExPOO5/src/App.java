@@ -15,8 +15,59 @@ usuario no saque más del 20%.
 g) Método consultarSaldo(): permitirá consultar el saldo disponible en la cuenta.
 h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta
  */
+
+import java.net.Socket;
+import java.util.Scanner;
+import Service.*;
+import Models.*;
+
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        try {
+            int op;
+            do {
+                Scanner crear = new Scanner(System.in);
+                CuentaService datos = new CuentaService();
+                Cuenta obCuenta = new Cuenta();
+                CuentaService nuevo = new CuentaService();
+                System.out.println("Cuenta Bancaria");
+                System.out.println("Presiona la tecla indicada para interactuar con el menu");
+                System.out.println("Presiona 1 para empezar a Proporcinar su cuenta");
+                System.out.println("Presiona 2 para empezar a Crear su cuenta");
+                System.out.println("Presiona 3 para cerrar programa");
+                op = crear.nextInt();
+                switch (op) {
+                    case 1:
+                        System.out.println("Iniciacion de Cuenta ");
+                        System.out.println("Ingrese el numero de cuenta: ");
+                        obCuenta.setNumeroCuenta(crear.nextInt());
+                        System.out.println("Ingrese el numero de IDN: ");
+                        obCuenta.setDNI(crear.nextInt());
+                        if (obCuenta.getNumeroCuenta()==123&&obCuenta.getDNI()==123) {
+                            
+                            datos.miCuenta();
+                        } else {
+                            System.out.println("Datos invalidos ingrese nuevamente los datos");
+                        }
+
+                        break;
+                    case 2:
+                        nuevo.crearCuenta();
+
+                        break;
+
+                    default:
+                        if (op == 3) {
+                            System.out.println("adios");
+                        } else {
+                            System.out.println("Seleccina algo del menu");
+                        }
+                        break;
+                }
+            } while (op != 3);
+        } catch (Exception e) {
+            System.out.println("Error de texto intente nuevamente");
+            // TODO: handle exception
+        }
     }
 }
