@@ -9,9 +9,19 @@ public class Cuenta {
     private int numeroCuenta;
     private long DNI;
     private double saldoActual;
+    private double interes;
+    
     // public int cuentasBancarias[]={123456789,987654321};
     // public int contrasenaBancaria[]={9010010,9432156};
     // public int saldoFijo[]={400,155};
+
+    public double getInteres() {
+        return interes;
+    }
+
+    public void setInteres(double interes) {
+        this.interes = interes;
+    }
 
     public int getNumeroCuenta() {
         return numeroCuenta;
@@ -72,6 +82,6 @@ public class Cuenta {
     @Override
     public String toString() {
         
-        return "Numero de cuenta: " + getNumeroCuenta() + ", DNI: " + getDNI() + ", Saldo:" + getSaldoActual();
+        return "Numero de cuenta: " + getNumeroCuenta() + ", DNI: " + getDNI() + ", Saldo:" + getSaldoActual()+", Interes: "+getInteres();
     }
 }
